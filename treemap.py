@@ -58,7 +58,7 @@ class BotDB():
             for row in reader:
                 row = [int(row[0]), str(row[1]), int(row[2])]
                 all_rows.append(row)
-                if counter == 1000:  # in order to not store everything in memory
+                if counter == 10000:  # in order to not store everything in memory
                     sql = "INSERT INTO {} (id, location) VALUES (%s, ST_GeomFromText(%s, %s))".format(table)
                     cursor.executemany(sql, all_rows)
                     counter = 0

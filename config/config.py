@@ -12,6 +12,6 @@ class Config():
         self.db_user = config['postgresql']['user']
         self.db_passwd = config['postgresql']['passwd']
         self.db_tables = {
-            'BUILDINGS1': config['files']['buildings'].split(),
-            'TREES1': config['files']['trees'].split(',')
+            'BUILDINGS2': config['files']['buildings'].split(),
+            'TREES2': config['files']['trees'].split(',')
         }
